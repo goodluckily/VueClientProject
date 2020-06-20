@@ -20,13 +20,13 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
 
-##git 提交过程看git初体验教程.txt
+## git 提交过程看git初体验教程.txt
 ```
 提交的项目文件里面
 ```
 
 
-##项目目录的划分
+## 项目文件的划分说明
 
 ## ------public(存放项目的公共文件)
 
