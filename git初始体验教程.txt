@@ -36,3 +36,16 @@ cmd--> git config --global https.proxy http://127.0.0.1:1080
 cmd--> git config --global --unset http.proxy 
 
 cmd--> git config --global --unset https.proxy 
+
+
+--每次修改文件后再次提交
+
+cmd--> git add git初始体验教程.txt     --这里是文件名称
+
+cmd--> git commit -m '说明'
+
+cmd--> git config --global --unset http.proxy 
+
+cmd--> git push
+
+
