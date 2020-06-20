@@ -1,0 +1,38 @@
+
+
+1.首先在git'hub上创建一个仓库
+
+2.得到 仓库的地址
+
+2.1在指定文件下 文件下
+cmd--> git clone 仓库地址
+
+2.2得到文件提交状态
+cmd-->git status
+
+2.3 开始提交
+cmd-->git commit -m '本次提交的说明'
+
+2.4 最后往gitHub仓库上提交
+cmd-->git push
+
+
+--邮件 名称的错误 需要重新设置的指令
+
+cmd--> git config --global user.name "username"
+
+cmd--> git config --global user.email "email"
+
+
+---代理的错误指令
+
+cmd--> git config --global http.proxy http://127.0.0.1:1080
+
+cmd--> git config --global https.proxy http://127.0.0.1:1080
+
+
+取消代理：
+
+cmd--> git config --global --unset http.proxy 
+
+cmd--> git config --global --unset https.proxy 
