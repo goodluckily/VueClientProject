@@ -52,3 +52,71 @@ cmd--> git config --global --unset http.proxy 
 cmd--> git push
 
 
+
+
+
+
+
+
+ Git-提交时On branch master Your branch is up to date with ‘origin/master’. nothing to commit, worki…
+如图所示：
+
+
+
+
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+原因：
+版本分支的问题
+解决方法：
+
+新建一个分支
+$ git branch newbranch  
+
+
+2. 检查分支是否创建成功
+
+$ git branch 
+
+会有如下提示（前面的*代表的是当前你所在的工作分支）
+
+3. 切换到你的新分支
+
+$ git checkout newbranch
+
+
+如果不放心，还可以 $ git branch确认下
+
+将你的改动提交到新分支上
+$ git add . 
+$ git commit -m "newbranch"
+
+
+然后git status检查是否成功
+
+5. 切换到主分支
+
+$ git checkout master 
+
+
+6. 将新分支提交的改动合并到主分支上
+
+$ git merge newbranch 
+1
+
+
+push代码
+$ git push -u origin master
+1
+
+8. 可能会提示你输入用户名跟密码，输入对应的用户名跟密码即可
+
+
+删除这个分支
+$ git branch -D newbranch
+
+
+
