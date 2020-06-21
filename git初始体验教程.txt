@@ -7,6 +7,9 @@
 2.1在指定文件下 文件下
 cmd--> git clone 仓库地址
 
+--例子 git clone https://github.com/goodluckily/suppermailStore.git
+
+
 2.2得到文件提交状态
 cmd-->git status
 
