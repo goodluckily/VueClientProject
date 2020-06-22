@@ -120,3 +120,35 @@ $ git branch -D newbranch
 
 
 
+
+
+---本地 获取最新的仓库代码的方式
+
+(推荐方法)
+
+//查询当前远程的版本
+$ git remote -v
+
+//获取最新代码到本地(本地当前分支为[branch]，获取的远端的分支为[origin/branch])
+$ git fetch origin master  [示例1：获取远端的origin/master分支]
+$ git fetch origin dev [示例2：获取远端的origin/dev分支]
+
+//查看版本差异
+$ git log -p master..origin/master [示例1：查看本地master与远端origin/master的版本差异]
+$ git log -p dev..origin/dev   [示例2：查看本地dev与远端origin/dev的版本差异]
+
+//合并最新代码到本地分支
+$ git merge origin/master  [示例1：合并远端分支origin/master到当前分支]
+$ git merge origin/dev [示例2：合并远端分支origin/dev到当前分支]
+
+
+(不推荐这种方式，因为是直接合并，无法提前处理冲突。)
+//查询当前远程的版本
+$ git remote -v
+//直接拉取并合并最新代码
+$ git pull origin master [示例1：拉取远端origin/master分支并合并到当前分支]
+$ git pull origin dev [示例2：拉取远端origin/dev分支并合并到当前分支]
+
+
+
+

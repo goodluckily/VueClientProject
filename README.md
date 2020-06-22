@@ -19,12 +19,10 @@ npm run build
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
-
 ## git 提交过程看git初体验教程.txt
 ```
 提交的项目文件里面
 ```
-
 
 ## 项目文件的划分说明
 
@@ -34,7 +32,8 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ```
 ------src\assets 资源文件
 ------src\assets\img 图片文件目录
-------src\assets\css css样式文件目录
+------src\assets\css css样式文件目录 
+------src\assets\css\normalize.css css样式格式统
 
 ------src\common(存放项目里面公共的Js文件的文件夹)
 
