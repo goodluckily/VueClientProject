@@ -48,7 +48,8 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ------src\store(Vuex公共状态管理的文件夹)
 
 ------src\views(非公共组件的文件夹)
-```
+
+---2020-09-02 lyz
 
 
 
