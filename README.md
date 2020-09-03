@@ -21,7 +21,142 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ## git 提交过程看git初体验教程.txt
 
 ```
-提交的项目文件里面
+
+
+1.首先在git'hub上创建一个仓库
+
+2.得到 仓库的地址
+
+2.1在指定文件下 文件下
+cmd--> git clone 仓库地址
+
+--例子 git clone https://github.com/goodluckily/suppermailStore.git
+
+
+2.2得到文件提交状态
+cmd-->git status
+
+2.3 开始提交
+cmd-->git commit -m '本次提交的说明'
+
+2.4 最后往gitHub仓库上提交
+cmd-->git push
+
+
+--邮件 名称的错误 需要重新设置的指令
+
+cmd--> git config --global user.name "username"
+
+cmd--> git config --global user.email "email"
+
+
+---代理的错误指令
+
+cmd--> git config --global http.proxy http://127.0.0.1:1080
+
+
+取消代理：
+
+cmd--> git config --global --unset http.proxy 
+
+
+--每次修改文件后再次提交
+
+cmd--> git add git初始体验教程.txt     --这里是文件名称
+
+cmd--> git commit -m '说明'
+
+cmd--> git config --global --unset http.proxy 
+
+cmd--> git push
+
+
+Git-提交时On branch master Your branch is up to date with ‘origin/master’. nothing to commit, worki…
+
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+原因：
+版本分支的问题
+解决方法：
+
+新建一个分支
+$ git branch newbranch  
+
+
+2. 检查分支是否创建成功
+
+$ git branch 
+
+会有如下提示（前面的*代表的是当前你所在的工作分支）
+
+3. 切换到你的新分支
+
+$ git checkout newbranch
+
+
+如果不放心，还可以 $ git branch确认下
+
+将你的改动提交到新分支上
+$ git add . 
+$ git commit -m "newbranch"
+
+
+然后git status检查是否成功
+
+5. 切换到主分支
+
+$ git checkout master 
+
+
+6. 将新分支提交的改动合并到主分支上
+
+$ git merge newbranch 
+1
+
+
+push代码
+$ git push -u origin master
+1
+
+8. 可能会提示你输入用户名跟密码，输入对应的用户名跟密码即可
+
+
+删除这个分支
+$ git branch -D newbranch
+
+
+
+---本地 获取最新的仓库代码的方式
+
+(推荐方法)
+
+//查询当前远程的版本
+$ git remote -v
+
+//获取最新代码到本地(本地当前分支为[branch]，获取的远端的分支为[origin/branch])
+$ git fetch origin master  [示例1：获取远端的origin/master分支]
+$ git fetch origin dev [示例2：获取远端的origin/dev分支]
+
+//查看版本差异
+$ git log -p master..origin/master [示例1：查看本地master与远端origin/master的版本差异]
+$ git log -p dev..origin/dev   [示例2：查看本地dev与远端origin/dev的版本差异]
+
+//合并最新代码到本地分支
+$ git merge origin/master  [示例1：合并远端分支origin/master到当前分支]
+$ git merge origin/dev [示例2：合并远端分支origin/dev到当前分支]
+
+
+(不推荐这种方式，因为是直接合并，无法提前处理冲突。)
+//查询当前远程的版本
+$ git remote -v
+//直接拉取并合并最新代码
+$ git pull origin master [示例1：拉取远端origin/master分支并合并到当前分支]
+$ git pull origin dev [示例2：拉取远端origin/dev分支并合并到当前分支]
+
+
 ```
 
 #### 说明
