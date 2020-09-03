@@ -43,7 +43,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 #### 目录结构
 
 ## ------public(存放项目的公共文件)
-------------------------bash
+```------------------------
 ├── /build/                     # 项目构建(webpack)相关配置
 ├── /config/                    # 项目开发环境配置
 ├── /src/                       # 源码目录
@@ -64,6 +64,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ├── /static/                    # 非组件静态资源
 ├── index.html                  # 页面入口
 └── README.md                   # 项目文档
+```
 
 ---2020-09-02 lyz
 
