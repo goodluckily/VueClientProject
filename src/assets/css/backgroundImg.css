@@ -1,0 +1,16 @@
+body {
+    /* 这个属性可以使页面上的字体抗锯齿,使用后字体看起来会更清晰舒服 */
+    -webkit-font-smoothing: antialiased;
+    width: 100%;
+    overflow: scroll;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    background-position: left top;
+    background-color: #242645;
+    color: #fff;
+    font-family: "Source Sans Pro";
+    position: relative;
+    background-image: url("../img/background.jpg");
+    background-repeat: no-repeat;
+
+}

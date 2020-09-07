@@ -1,5 +1,4 @@
 /* Storage的存储方式  */
-
 function getStorage (storage) {
   return function (key) {
     return new Promise(resolve => {
@@ -26,14 +25,36 @@ function setStorage (storage) {
   }
 }
 
+
+function removeStore(storage) {
+	return function (key) {
+    return new Promise(resolve => {
+      storage.removeItem(key);
+      resolve("delok")
+    })
+  }
+	window.localStorage
+}
+
 // localStorage的存贮获取
 export const local = {
   getItem: getStorage(localStorage),
-  setItem: setStorage(localStorage)
+  setItem: setStorage(localStorage),
+  delItem: removeStore(localStorage)
 }
 
 // sessionStorage的存贮获取
 export const session = {
   getItem: getStorage(sessionStorage),
-  setItem: setStorage(sessionStorage)
+  setItem: setStorage(sessionStorage),
+  delItem: removeStore(sessionStorage)
 }
+
+
+//获取返回结果必须是
+// result.then(res=>{
+//   console.log(res) // res为promise中的值
+// })
+
+
+

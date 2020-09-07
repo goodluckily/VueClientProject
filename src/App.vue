@@ -1,12 +1,13 @@
 <template>
   <div id="app">
-    <h1>测试开始</h1>
+    <router-view></router-view>
   </div>
 </template>
-
 <script>
-
 export default {
+  metaInfo: {
+    title: "主页", //页面标题
+  },
   name: 'App',
   components: {
   }
