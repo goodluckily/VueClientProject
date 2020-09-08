@@ -109,6 +109,8 @@ $ git commit -m "newbranch"
 5. 切换到主分支
 
 $ git checkout master 
+//切换到dev
+$ git checkout dev 
 
 
 6. 将新分支提交的改动合并到主分支上
@@ -155,6 +157,36 @@ $ git remote -v
 //直接拉取并合并最新代码
 $ git pull origin master [示例1：拉取远端origin/master分支并合并到当前分支]
 $ git pull origin dev [示例2：拉取远端origin/dev分支并合并到当前分支]
+
+
+
+一  ： Windows中
+
+　　① git status  //查看当前代码状态  红色未提交  绿色代表代码在缓存区
+
+　　② git add .   //把所有修改的代码放到缓存区
+
+　　③ git commit -m "修改注明"   //提交代码 注明修改说明
+
+　　④ git push origin (当前分支名)   //提交到远程仓库里面  这时候可以去仓库里面看下代码变化
+
+　　二 ： 在服务器中
+
+　　① 登陆服务器 进入到网站根目录  执行  git clone (远程仓库地址)
+
+　　② 查看当前分支  git branch  如果是master分支 请切换到其他分支测试运行代码  切换到其他分支：git checkout (分支名)
+
+　　③ 执行 git pull origin (当前分支名)  //意思就是把远程仓库代码更新到当前服务器
+
+　　④ 打开网址运行代码----OK!
+
+　　⑤ 确认代码无误，合并到主分支，
+
+　　　　第一步：git checkout master  //把主分支捡出来
+
+　　　　第二部：git pull origin (测试分支名)  //把测试分支上运行无误的代码pull下来
+
+　　　　第三部：打开网址运行代码----OK
 
 
 ```
