@@ -28,14 +28,18 @@
         </el-form-item>
       </el-form>
     </div>
-  </div>
 
-  
+    <div class="dandelion">
+      <span class="smalldan"></span>
+      <span class="bigdan"></span>
+    </div>
+  </div>
 </template>
 
 <script>
 import { local, session } from "@/utils/storage.js";
-import  "../../assets/css/backgroundImg.css";
+import "../../assets/css/backgroundImg.css";
+import "../../assets/css/pogongying.css";
 export default {
   data() {
     return {
@@ -104,12 +108,12 @@ export default {
 </script>
 
 <style scoped>
-.container{
-   height:100%;
-   width: 100%;
+.container {
+  height: 100%;
+  width: 100%;
 }
 .login-container {
-    padding: 0;
+  padding: 0;
 }
 
 .ruleForm {
@@ -122,12 +126,11 @@ export default {
   border: 1px solid #eaeaea;
   box-shadow: 0 0 25px #cac6c6;
 }
-.ruleForm .title{
+.ruleForm .title {
   color: #9e9e9e;
 }
 label.el-checkbox.rememberme {
   margin: 0px 0px 15px;
   text-align: left;
 }
-
 </style>

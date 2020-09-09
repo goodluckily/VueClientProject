@@ -14,7 +14,11 @@ Vue.use(Meta)  //注册使用vue-meta模块
 //重置样式生效
 import './assets/css/reset.css'
 
+//Vuex 状态管理
+import store from './store/store.js'
+
 new Vue({
   router,
+  store,
   render: h => h(App),
 }).$mount('#app')

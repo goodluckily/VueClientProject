@@ -36,6 +36,10 @@ function removeStore(storage) {
 	window.localStorage
 }
 
+// sessionStorage（临时存储） ：为每一个数据源维持一个存储区域，在浏览器打开期间存在，包括页面重新加载
+
+// localStorage（长期存储） ：与 sessionStorage 一样，但是浏览器关闭后，数据依然会一直存在
+
 // localStorage的存贮获取
 export const local = {
   getItem: getStorage(localStorage),
@@ -49,7 +53,6 @@ export const session = {
   setItem: setStorage(sessionStorage),
   delItem: removeStore(sessionStorage)
 }
-
 
 //获取返回结果必须是
 // result.then(res=>{
